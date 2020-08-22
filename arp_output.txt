@@ -1,0 +1,156 @@
+[
+    [
+        {
+            "age": 27.0,
+            "interface": "FastEthernet3/0",
+            "ip": "123.123.1.1",
+            "mac": "4A:30:F0:8E:1D:76"
+        },
+        {
+            "age": 0.0,
+            "interface": "FastEthernet3/0",
+            "ip": "123.123.1.12",
+            "mac": "CA:06:0B:27:00:54"
+        },
+        {
+            "age": 63.0,
+            "interface": "FastEthernet0/0",
+            "ip": "172.16.2.1",
+            "mac": "CA:02:0A:DC:00:00"
+        },
+        {
+            "age": 0.0,
+            "interface": "FastEthernet0/0",
+            "ip": "172.16.2.2",
+            "mac": "CA:06:0B:27:00:00"
+        }
+    ],
+    {
+        "FastEthernet0/0": {
+            "description": "",
+            "is_enabled": true,
+            "is_up": true,
+            "last_flapped": -1.0,
+            "mac_address": "CA:06:0B:27:00:00",
+            "mtu": 1500,
+            "speed": 100
+        },
+        "FastEthernet1/0": {
+            "description": "",
+            "is_enabled": false,
+            "is_up": false,
+            "last_flapped": -1.0,
+            "mac_address": "CA:06:0B:27:00:1C",
+            "mtu": 1500,
+            "speed": 100
+        },
+        "FastEthernet1/1": {
+            "description": "",
+            "is_enabled": false,
+            "is_up": false,
+            "last_flapped": -1.0,
+            "mac_address": "CA:06:0B:27:00:1D",
+            "mtu": 1500,
+            "speed": 100
+        },
+        "FastEthernet2/0": {
+            "description": "",
+            "is_enabled": false,
+            "is_up": false,
+            "last_flapped": -1.0,
+            "mac_address": "CA:06:0B:27:00:38",
+            "mtu": 1500,
+            "speed": 100
+        },
+        "FastEthernet2/1": {
+            "description": "",
+            "is_enabled": false,
+            "is_up": false,
+            "last_flapped": -1.0,
+            "mac_address": "CA:06:0B:27:00:39",
+            "mtu": 1500,
+            "speed": 100
+        },
+        "FastEthernet3/0": {
+            "description": "",
+            "is_enabled": true,
+            "is_up": true,
+            "last_flapped": -1.0,
+            "mac_address": "CA:06:0B:27:00:54",
+            "mtu": 1500,
+            "speed": 100
+        },
+        "FastEthernet3/1": {
+            "description": "",
+            "is_enabled": false,
+            "is_up": false,
+            "last_flapped": -1.0,
+            "mac_address": "CA:06:0B:27:00:55",
+            "mtu": 1500,
+            "speed": 100
+        },
+        "Loopback190": {
+            "description": "",
+            "is_enabled": true,
+            "is_up": true,
+            "last_flapped": -1.0,
+            "mac_address": "",
+            "mtu": 1514,
+            "speed": 8000
+        },
+        "Loopback2": {
+            "description": "",
+            "is_enabled": true,
+            "is_up": true,
+            "last_flapped": -1.0,
+            "mac_address": "",
+            "mtu": 1514,
+            "speed": 8000
+        },
+        "Loopback200": {
+            "description": "",
+            "is_enabled": true,
+            "is_up": true,
+            "last_flapped": -1.0,
+            "mac_address": "",
+            "mtu": 1514,
+            "speed": 8000
+        },
+        "Loopback202": {
+            "description": "",
+            "is_enabled": true,
+            "is_up": true,
+            "last_flapped": -1.0,
+            "mac_address": "",
+            "mtu": 1514,
+            "speed": 8000
+        },
+        "Loopback22": {
+            "description": "",
+            "is_enabled": true,
+            "is_up": true,
+            "last_flapped": -1.0,
+            "mac_address": "",
+            "mtu": 1514,
+            "speed": 8000
+        },
+        "Loopback220": {
+            "description": "",
+            "is_enabled": true,
+            "is_up": true,
+            "last_flapped": -1.0,
+            "mac_address": "",
+            "mtu": 1514,
+            "speed": 8000
+        },
+        "Loopback222": {
+            "description": "",
+            "is_enabled": true,
+            "is_up": true,
+            "last_flapped": -1.0,
+            "mac_address": "",
+            "mtu": 1514,
+            "speed": 8000
+        }
+    }
+]

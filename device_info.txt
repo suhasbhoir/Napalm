@@ -1,0 +1,25 @@
+{
+    "fqdn": "B2.gns3.lab",
+    "hostname": "B2",
+    "interface_list": [
+        "FastEthernet0/0",
+        "FastEthernet1/0",
+        "FastEthernet1/1",
+        "FastEthernet2/0",
+        "FastEthernet2/1",
+        "FastEthernet3/0",
+        "FastEthernet3/1",
+        "Loopback2",
+        "Loopback22",
+        "Loopback190",
+        "Loopback200",
+        "Loopback202",
+        "Loopback220",
+        "Loopback222"
+    ],
+    "model": "7206VXR",
+    "os_version": "7200 Software (C7200-ADVIPSERVICESK9-M), Version 15.2(4)S5, RELEASE SOFTWARE (fc1)",
+    "serial_number": "4279256517",
+    "uptime": 4380,
+    "vendor": "Cisco"
+}

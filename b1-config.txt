@@ -1,0 +1,153 @@
+Current configuration : 2326 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname B1
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$6F8K$jAmHppdT3277TfbnqgSak0
+!
+no aaa new-model
+memory-size iomem 5
+no ip icmp rate-limit unreachable
+ip cef
+!
+!
+!
+!
+no ip domain lookup
+ip domain name gns3.lab
+ip auth-proxy max-nodata-conns 3
+ip admission max-nodata-conns 3
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+username admin password 0 admin
+!
+!
+ip tcp synwait-time 5
+ip ssh version 2
+!
+!
+!
+!
+!
+interface Loopback1
+ ip address 1.1.1.1 255.255.255.255
+!
+interface Loopback11
+ ip address 11.11.11.11 255.255.255.255
+!
+interface Loopback100
+ ip address 100.100.100.100 255.255.255.255
+!
+interface Loopback101
+ ip address 101.101.101.101 255.255.255.255
+!
+interface Loopback110
+ ip address 110.110.110.110 255.255.255.255
+!
+interface Loopback111
+ ip address 111.111.111.111 255.255.255.255
+!
+interface Loopback190
+ ip address 190.1.1.1 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 172.16.1.2 255.255.255.252
+ speed 100
+ full-duplex
+!
+interface FastEthernet0/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet3/0
+ description *****MNGMT*****
+ ip address 123.123.1.11 255.255.255.0
+ duplex auto
+ speed auto
+!
+router bgp 1000
+ no synchronization
+ bgp log-neighbor-changes
+ network 1.1.1.1 mask 255.255.255.255
+ network 11.11.11.11 mask 255.255.255.255
+ network 100.100.100.100 mask 255.255.255.255
+ network 101.101.101.101 mask 255.255.255.255
+ network 110.110.110.110 mask 255.255.255.255
+ network 111.111.111.111 mask 255.255.255.255
+ network 172.16.1.0 mask 255.255.255.252
+ network 190.1.1.1 mask 255.255.255.255
+ neighbor 172.16.1.1 remote-as 2000
+ neighbor 172.16.1.1 default-originate
+ default-information originate
+ no auto-summary
+!
+ip forward-protocol nd
+!
+!
+no ip http server
+no ip http secure-server
+!
+no cdp log mismatch duplex
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 3
+ login local
+line vty 4
+ login local
+ transport input ssh
+!
+!

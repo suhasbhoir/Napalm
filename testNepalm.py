@@ -1,20 +1,49 @@
 from napalm import get_network_driver
-import json
+from datetime import datetime
+import time
+import threading  # Now enabling ihe multi-threading
+'''
+import logging
+logging.basicConfig(filename='test.log', level=logging.DEBUG)
+logger = logging.getLogger("netmiko")
+'''
 
-driver = get_network_driver('ios')
-optional_args = {'secret': 'cisco'}
-ios = driver('b2', 'admin', 'admin', optional_args=optional_args)
-ios.open()
+start = time.time()
 
-output = ios.get_arp_table(), ios.get_interfaces()
-# for item in output:
-#     print(item)
+def configsend(devices):
+    connections = get_network_driver(**devices)
+    ios.open()
 
-dump = json.dumps(output, sort_keys=True, indent=4)
-# print(dump)
+    ios.load_merge_candidate('all_config.txt')
 
-with open('arp_output.txt', 'w') as f:
-    f.write(dump)
+    deff = ios.compare_config()
+
+    print(deff)
 
 
-ios.close()
+    ios.close()
+
+with open('lab_routers.txt') as f:
+    mydevices1 = f.read().splitlines()
+
+# Creating a list here before for loop
+threads1 = list()
+for routers in mydevices1:
+    optional_args = {'secret': 'cisco'}
+    connections_driver = get_network_driver('ios')
+    ios = connections_driver(routers,'admin', 'admin', optional_args=optional_args)
+
+    #creating thread here
+    th = threading.Thread(target=configsend, args=(ios, ) )
+    threads1.append(th)
+
+for th in threads1:
+    th.start()
+
+for th in threads1:
+    th.join()
+
+
+
+end = time.time()
+print(f'Total time took to execution this script is: {end - start}')

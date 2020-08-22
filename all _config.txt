@@ -1,0 +1,4 @@
+access-list 150 deny tcp any any eq 23
+access-list 150 permit ip any any
+int f3/0
+ip access-group 150 in
