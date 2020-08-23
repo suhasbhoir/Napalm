@@ -1,0 +1,8 @@
+access-list 102 deny   tcp any any eq ftp
+access-list 102 deny   tcp any any eq ftp-data
+access-list 102 deny   tcp any any eq telnet
+access-list 102 deny   tcp any any eq www
+access-list 102 deny   tcp any any eq whois
+access-list 102 deny   tcp any any eq talk
+access-list 102 deny   tcp any any eq gopher
+access-list 102 permit ip any any
