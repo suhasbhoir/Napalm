@@ -1,5 +1,4 @@
 b1
-b2
 cr-r1
 cr-r2
 cr-sw1
@@ -7,3 +6,4 @@ camp-1
 camp-2
 sd-wn
 dc
+b2

@@ -1,0 +1,11 @@
+ip access-list extended interface_acl
+101 permit tcp any host 190.1.1.9 eq www
+102 permit tcp any host 191.191.191.191 eq www
+103 permit tcp any host 192.192.192.192 eq www
+104 permit tcp any host 193.193.193.193 eq www
+105 permit tcp any host 194.194.194.194 eq www
+106 permit tcp any host 195.195.195.195 eq www
+107 permit tcp any host 196.196.196.196 eq www
+108 permit tcp any host 197.197.197.197 eq www
+109 permit tcp any host 198.198.198.198 eq www
+110 permit tcp any host 199.199.199.199 eq www
